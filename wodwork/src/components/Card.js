@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import EditButton from './EditButton';
+import {Exercises} from './Exercises';
 
 const Card = styled.article`
     background-color: #fdfdfd;
@@ -27,25 +28,28 @@ const Heading = styled.h1`
     margin-top: 1rem;
 `;
 
-const Description = styled.p`
-    border-bottom: 2px dotted #DDDDDD;
-    color: #6CA8BB;
-    font-size: 1.2rem;
-    margin-top: 0;
-    padding-bottom: .5rem;
-`;
+// const StyledExercises = styled(Exercises)`
+//     border-bottom: 2px dotted #DDDDDD;
+//     color: #6CA8BB;
+//     font-size: 1.2rem;
+//     margin-top: 0;
+//     padding-bottom: .5rem;
+// `;
+
+const Date = styled.p``;
 
 export default class extends React.PureComponent {
 
     render() {
         const {props} = this;
-
         return (
             <Card>
                 <Heading>{props.title}
                     <EditButton />
+                    <Date>{props.date}</Date>
                 </Heading>
-                <Description>{props.workoutList}</Description>
+                <Exercises exercises={props.exercises}></Exercises>
+
             </Card>
         );
     }

@@ -32,18 +32,15 @@ export default class extends React.Component {
                 <CardList className={props.className}>
                     {props.workouts.map(
                         item => {
-                            let type;
+                            console.log(item);
 
-                            for(let i = 0; i < item.workoutList.length; i++) {
-                                if(item.workoutList[i].name) {
-                                    type = item.workoutList[i].name[0]; // there is always only 1 tag
-                                }
-                            }
+                            
                             return (
                                 <CardContainer key={item.id}>
                                     <Card 
                                         title={item.title} 
-                                        workoutList={item.workoutList}>
+                                        date={item.date}
+                                        exercises={item.exercises}>
                                     </Card>
                                 </CardContainer>
                             );
