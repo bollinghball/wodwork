@@ -21,6 +21,6 @@ const StyledButton = styled.a`
 `;
 
 export const Button = props => 
-    <StyledButton {...props} href={props.url}>Add Workout</StyledButton>
+    <StyledButton href={props.url}>Add Workout</StyledButton>
 
 export default { Button };

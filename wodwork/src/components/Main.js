@@ -10,21 +10,9 @@ const Main = styled.main`
     display: block; 
 `;
 
-export default class extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            workouts: this.props.workouts
-        };
-    }
-
-    render() {
-        return (
-            <Main>
-                <Container>
-                    <CardList workouts={this.props.workouts} />
-                </Container>
-            </Main>
-        );
-    }
-}
+export default props => 
+    <Main>
+        <Container>
+            <CardList workouts={props.workouts} exerciseLibrary={props.exerciseLibrary} />
+        </Container>
+    </Main>

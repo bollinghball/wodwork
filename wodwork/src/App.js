@@ -5,8 +5,7 @@ import Header from "./components/Header";
 import Main from './components/Main';
 import Footer from "./components/Footer";
 import { Button } from './components/Button';
-import { DB_CONFIG } from './Config/config';
-import workouts from './workouts';
+import {workouts, exerciseLibrary} from './workouts';
 
 class App extends Component {
 
@@ -14,20 +13,16 @@ class App extends Component {
     super(props);
 
     this.state = {
-      workouts: workouts.workouts
+      workouts,
+      exerciseLibrary
     }
   }
-
-  componentWillMount(){
-
-  }
-
 
   render() {
     return (
       <div>
         <Header />
-        <Main workouts={this.state.workouts}/>
+        <Main workouts={this.state.workouts} exerciseLibrary={this.state.exerciseLibrary}/>
         <Button />
         <Footer
           copyright = "&copy; 2017 Bolling Ball">

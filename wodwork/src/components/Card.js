@@ -46,9 +46,9 @@ export default class extends React.PureComponent {
             <Card>
                 <Heading>{props.title}
                     <EditButton />
-                    <Date>{props.date}</Date>
                 </Heading>
-                <Exercises exercises={props.exercises}></Exercises>
+                <Date>{props.date}</Date>
+                <Exercises exercises={props.exercises} exerciseLibrary={props.exerciseLibrary}></Exercises>
 
             </Card>
         );

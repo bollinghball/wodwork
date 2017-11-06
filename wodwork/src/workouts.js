@@ -1,5 +1,4 @@
-export default {
-    "exercises": [
+export const exerciseLibrary =  [
         {   
             "id": 1,
             "name": "Burpees"
@@ -28,9 +27,9 @@ export default {
             "id": 7,
             "name": "Kettlebell Swings"
         }
-    ],
+]
 
-    "workouts": [
+export const workouts = [
         {   "id": 1,
             "date": "Sunday, September 10",
             "title": "The Bolling Special",
@@ -130,4 +129,5 @@ export default {
         }
 
     ]
-};
+
+export default {exerciseLibrary, workouts};

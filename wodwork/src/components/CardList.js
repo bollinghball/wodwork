@@ -32,12 +32,11 @@ export default class extends React.Component {
                 <CardList className={props.className}>
                     {props.workouts.map(
                         item => {
-                            console.log(item);
-
                             
                             return (
                                 <CardContainer key={item.id}>
                                     <Card 
+                                        exerciseLibrary = {props.exerciseLibrary}
                                         title={item.title} 
                                         date={item.date}
                                         exercises={item.exercises}>
