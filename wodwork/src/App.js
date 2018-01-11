@@ -14,7 +14,8 @@ class App extends Component {
 
     this.state = {
       workouts,
-      exerciseLibrary
+      exerciseLibrary,
+      isEditing: false
     }
   }
 
@@ -22,7 +23,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Main workouts={this.state.workouts} exerciseLibrary={this.state.exerciseLibrary}/>
+        <Main workouts={this.state.workouts} exerciseLibrary={this.state.exerciseLibrary} isEditing={this.state.isEditing}/>
         <Button />
         <Footer
           copyright = "&copy; 2017 Bolling Ball">

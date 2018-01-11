@@ -38,7 +38,7 @@ const Heading = styled.h1`
 
 const Date = styled.p``;
 
-export default class extends React.PureComponent {
+export default class extends React.Component {
 
     render() {
         const {props} = this;

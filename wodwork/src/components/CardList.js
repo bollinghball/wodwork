@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
+import BlankCard from "./BlankCard"
 import { CardContainer } from './CardContainer';
 import workouts from '../workouts'
 
@@ -45,6 +46,7 @@ export default class extends React.Component {
                             );
                         }
                     )}
+                    <BlankCard value={props.value}/>
                 </CardList>
             );
         }
